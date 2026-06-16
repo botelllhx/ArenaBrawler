@@ -40,6 +40,12 @@ Thumbs.db
 *.unitypackage
 *.app
 
+# Binários grandes do Unity AI Assistant (relay/gateway > 50MB)
+Packages/com.unity.ai.assistant/RelayApp~/
+
+# Arquivos gerados pela Unity
+*.slnx
+
 # Segredos do Photon (NÃO comitar App ID)
 # Ajuste o nome conforme onde o Fusion guarda suas settings localmente.
 **/PhotonAppSettings.asset.local
