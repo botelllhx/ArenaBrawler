@@ -8,6 +8,16 @@ namespace Arena.Gameplay
     {
         [SerializeField] private float _speed = 6f;
 
+        public override void Spawned()
+        {
+            if (HasInputAuthority)
+            {
+                var cam = FindAnyObjectByType<CameraController>();
+                if (cam != null)
+                    cam.SetTarget(transform);
+            }
+        }
+
         public override void FixedUpdateNetwork()
         {
             if (GetInput(out NetworkInputData input))
@@ -17,10 +27,11 @@ namespace Arena.Gameplay
                     moveDirection.Normalize();
                 transform.position += moveDirection * _speed * Runner.DeltaTime;
 
-                if (moveDirection.sqrMagnitude > 0.01f)
-                {
-                    transform.rotation = Quaternion.LookRotation(moveDirection);
-                }
+                // Rotação aponta para a mira (posição do mouse no mundo)
+                var aimWorldPos = new Vector3(input.Aim.x, transform.position.y, input.Aim.y);
+                var aimDirection = aimWorldPos - transform.position;
+                if (aimDirection.sqrMagnitude > 0.1f)
+                    transform.rotation = Quaternion.LookRotation(aimDirection);
             }
         }
     }

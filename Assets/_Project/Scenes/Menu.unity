@@ -1109,6 +1109,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288830287}
   m_CullTransparentMesh: 1
+--- !u!114 &1290778514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/Attack
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
 --- !u!1 &1316688152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Arena.Networking::Arena.Networking.PlayerInputCollector
   _moveAction: {fileID: 949311728}
   _lookAction: {fileID: 1488886275}
+  _attackAction: {fileID: 1290778514}
 --- !u!4 &1316688155
 Transform:
   m_ObjectHideFlags: 0
