@@ -35,8 +35,25 @@ namespace Arena.Gameplay
         private void Die()
         {
             OnDeath?.Invoke();
-            transform.position = Vector3.up;
-            CurrentHealth = _maxHealth;
+
+            // Notifica o GameMode se existir
+            var gameMode = FindAnyObjectByType<GameModeBase>();
+            if (gameMode != null)
+            {
+                gameMode.OnPlayerDied(GetComponent<PlayerController>());
+            }
+            else
+            {
+                // Fallback: respawn simples sem GameMode
+                transform.position = Vector3.up;
+                CurrentHealth = _maxHealth;
+            }
+        }
+
+        public void Revive()
+        {
+            if (HasStateAuthority)
+                CurrentHealth = _maxHealth;
         }
     }
 }
