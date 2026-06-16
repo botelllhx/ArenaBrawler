@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8360a7f473b4fcb4287f9cd13f236fc0, type: 3}
+  m_Name: Tank
+  m_EditorClassIdentifier: Arena.Gameplay::Arena.Gameplay.Data.BrawlerDefinition
+  BrawlerName: Tank
+  MaxHealth: 6000
+  MoveSpeed: 8
+  MaxAmmo: 3
+  RechargeTimePerCharge: 2
+  Attack: {fileID: 11400000, guid: 1f50ea977cb86f545ad20c058e10c373, type: 2}
+  Super: {fileID: 11400000, guid: 076ed14d7d3475c4c83f919085497e89, type: 2}
+  SuperChargeRequired: 2400

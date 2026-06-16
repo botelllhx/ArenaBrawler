@@ -6,10 +6,12 @@ namespace Arena.Gameplay
 {
     public class PlayerMotor : NetworkBehaviour
     {
-        [SerializeField] private float _speed = 6f;
+        private float _speed;
 
         public override void Spawned()
         {
+            _speed = GetComponent<PlayerController>().Definition.MoveSpeed;
+
             if (HasInputAuthority)
             {
                 var cam = FindAnyObjectByType<CameraController>();
@@ -27,7 +29,6 @@ namespace Arena.Gameplay
                     moveDirection.Normalize();
                 transform.position += moveDirection * _speed * Runner.DeltaTime;
 
-                // Rotação aponta para a mira (posição do mouse no mundo)
                 var aimWorldPos = new Vector3(input.Aim.x, transform.position.y, input.Aim.y);
                 var aimDirection = aimWorldPos - transform.position;
                 if (aimDirection.sqrMagnitude > 0.1f)

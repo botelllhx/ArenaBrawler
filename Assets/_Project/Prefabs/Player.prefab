@@ -50,6 +50,9 @@ GameObject:
   - component: {fileID: 793718128010821773}
   - component: {fileID: 1617312268297903668}
   - component: {fileID: 9188022362685719869}
+  - component: {fileID: 4021923444953414435}
+  - component: {fileID: 1542380892889004415}
+  - component: {fileID: 4534463804851247187}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -177,6 +180,9 @@ MonoBehaviour:
   - {fileID: 793718128010821773}
   - {fileID: 1617312268297903668}
   - {fileID: 9188022362685719869}
+  - {fileID: 4021923444953414435}
+  - {fileID: 1542380892889004415}
+  - {fileID: 4534463804851247187}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &2764732721058515907
 MonoBehaviour:
@@ -207,7 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e8fd2e4c41d2414e8100447c262ab48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Arena.Gameplay::Arena.Gameplay.PlayerMotor
-  _speed: 6
 --- !u!114 &3189881599768280724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79cce17ee74478245a034a62bae91a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Arena.Gameplay::Arena.Gameplay.Health
-  _maxHealth: 3800
   _CurrentHealth: 0
 --- !u!114 &793718128010821773
 MonoBehaviour:
@@ -234,8 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33b19c2235ae9d41be07f64edb22dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Arena.Gameplay::Arena.Gameplay.AmmoSystem
-  _maxAmmo: 3
-  _rechargeTime: 1.5
   _CurrentAmmo: 0
 --- !u!114 &1617312268297903668
 MonoBehaviour:
@@ -249,7 +251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d95c1228b8bec842bf923a20eb1658c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Arena.Gameplay::Arena.Gameplay.Weapon
-  _projectilePrefab: {fileID: 2873194922861740208, guid: 1834471e03f57e14a8f519d81c00b63b, type: 3}
   _firePoint: {fileID: 4238973933871588767}
 --- !u!114 &9188022362685719869
 MonoBehaviour:
@@ -268,6 +269,45 @@ MonoBehaviour:
   Offset: {x: 0, y: 0, z: 0}
   GizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   Hitboxes: []
+--- !u!114 &4021923444953414435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5122302009796510362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3efe765f4b48714e84027b01f827c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Arena.Gameplay::Arena.Gameplay.PlayerController
+  _definition: {fileID: 11400000, guid: 2d6c7ce8f4c0a1c41b6e8b8943096b2f, type: 2}
+--- !u!114 &1542380892889004415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5122302009796510362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d96fc1ea11a84b4094eac26edff1624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Arena.Gameplay::Arena.Gameplay.SuperMeter
+  _CurrentCharge: 0
+--- !u!114 &4534463804851247187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5122302009796510362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d963998392aecfb4a9c886ad6d6960ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Arena.Gameplay::Arena.Gameplay.SuperExecutor
+  _firePoint: {fileID: 4238973933871588767}
 --- !u!1 &6195571224523611633
 GameObject:
   m_ObjectHideFlags: 0

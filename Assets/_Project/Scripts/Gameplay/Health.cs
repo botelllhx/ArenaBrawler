@@ -6,14 +6,17 @@ namespace Arena.Gameplay
 {
     public class Health : NetworkBehaviour
     {
-        [SerializeField] private int _maxHealth = 3800;
-
         [Networked] public int CurrentHealth { get; private set; }
+
+        private int _maxHealth;
 
         public event Action OnDeath;
 
         public override void Spawned()
         {
+            var def = GetComponent<PlayerController>().Definition;
+            _maxHealth = def.MaxHealth;
+
             if (HasStateAuthority)
                 CurrentHealth = _maxHealth;
         }
@@ -32,7 +35,6 @@ namespace Arena.Gameplay
         private void Die()
         {
             OnDeath?.Invoke();
-            // Fase 2: respawn simples — reposiciona e restaura vida
             transform.position = Vector3.up;
             CurrentHealth = _maxHealth;
         }

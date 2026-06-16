@@ -7,12 +7,15 @@ namespace Arena.Networking
     {
         [SerializeField] private InputActionReference _moveAction;
         [SerializeField] private InputActionReference _attackAction;
+        [SerializeField] private InputActionReference _superAction;
 
         public NetworkInputData CollectInput()
         {
             var data = new NetworkInputData();
             data.Move = _moveAction.action.ReadValue<Vector2>();
             data.Buttons.Set(NetworkInputData.ButtonAttack, _attackAction.action.IsPressed());
+            if (_superAction != null)
+                data.Buttons.Set(NetworkInputData.ButtonSuper, _superAction.action.IsPressed());
 
             var cam = Camera.main;
             if (cam != null && Mouse.current != null)
@@ -34,12 +37,14 @@ namespace Arena.Networking
         {
             _moveAction.action.Enable();
             _attackAction.action.Enable();
+            if (_superAction != null) _superAction.action.Enable();
         }
 
         private void OnDisable()
         {
             _moveAction.action.Disable();
             _attackAction.action.Disable();
+            if (_superAction != null) _superAction.action.Disable();
         }
     }
 }

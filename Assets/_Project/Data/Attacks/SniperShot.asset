@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3f58655efb5e64093042514f6bf914, type: 3}
+  m_Name: SniperShot
+  m_EditorClassIdentifier: Arena.Gameplay::Arena.Gameplay.Data.AttackDefinition
+  ProjectilePrefab: {fileID: 2873194922861740208, guid: 1834471e03f57e14a8f519d81c00b63b, type: 3}
+  ProjectileSpeed: 25
+  Damage: 1000
+  Range: 15
+  ProjectileCount: 1
+  SpreadAngle: 0

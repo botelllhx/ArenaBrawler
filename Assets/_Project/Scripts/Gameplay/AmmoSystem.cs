@@ -5,16 +5,20 @@ namespace Arena.Gameplay
 {
     public class AmmoSystem : NetworkBehaviour
     {
-        [SerializeField] private int _maxAmmo = 3;
-        [SerializeField] private float _rechargeTime = 1.5f;
-
         [Networked] public int CurrentAmmo { get; private set; }
         [Networked] private TickTimer _rechargeTimer { get; set; }
+
+        private int _maxAmmo;
+        private float _rechargeTime;
 
         public bool HasAmmo => CurrentAmmo > 0;
 
         public override void Spawned()
         {
+            var def = GetComponent<PlayerController>().Definition;
+            _maxAmmo = def.MaxAmmo;
+            _rechargeTime = def.RechargeTimePerCharge;
+
             if (HasStateAuthority)
                 CurrentAmmo = _maxAmmo;
         }
