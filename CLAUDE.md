@@ -83,4 +83,5 @@ o que dá para fazer via MCP e o que é externo/humano.
 
 Commit pequeno e frequente, um por unidade de trabalho coesa. Mensagem no
 imperativo descrevendo o porquê. Não comite segredos (App ID do Photon vai em
-arquivo ignorado, ver `docs/NETWORKING.md`).
+arquivo ignorado, ver `docs/NETWORKING.md`). **NUNCA** adicione a linha
+`Co-Authored-By` nos commits.

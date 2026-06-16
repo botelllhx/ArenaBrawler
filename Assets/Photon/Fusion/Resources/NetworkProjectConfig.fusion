@@ -67,7 +67,11 @@
         "Assembly-CSharp",
         "Assembly-CSharp-firstpass",
         "Fusion.Addons.Physics",
-        "Fusion.Addons.FSM"
+        "Fusion.Addons.FSM",
+        "Arena.Core",
+        "Arena.Networking",
+        "Arena.Gameplay",
+        "Arena.UI"
     ],
     "UseSerializableDictionary": true,
     "NullChecksForNetworkedProperties": true,

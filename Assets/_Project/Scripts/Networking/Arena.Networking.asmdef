@@ -3,7 +3,8 @@
     "rootNamespace": "Arena.Networking",
     "references": [
         "Arena.Core",
-        "Fusion.Unity"
+        "Fusion.Unity",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

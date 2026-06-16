@@ -4,7 +4,9 @@
     "references": [
         "Arena.Core",
         "Arena.Gameplay",
-        "Fusion.Unity"
+        "Arena.Networking",
+        "Fusion.Unity",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
