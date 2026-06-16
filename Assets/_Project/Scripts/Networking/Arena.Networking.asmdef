@@ -1,0 +1,17 @@
+{
+    "name": "Arena.Networking",
+    "rootNamespace": "Arena.Networking",
+    "references": [
+        "Arena.Core",
+        "Fusion.Unity"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

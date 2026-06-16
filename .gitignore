@@ -1,0 +1,47 @@
+# Pastas geradas pela Unity (nunca versionar)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Arquivos de IDE / build
+.vs/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Crash / sistema
+sysinfo.txt
+*.stackdump
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Pacotes e builds exportados
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Segredos do Photon (NÃO comitar App ID)
+# Ajuste o nome conforme onde o Fusion guarda suas settings localmente.
+**/PhotonAppSettings.asset.local
+*.appid
+secrets.*
